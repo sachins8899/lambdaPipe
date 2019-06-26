@@ -5,9 +5,9 @@ phases:
         java: openjdk8
      build:
        commands:
-         - aws cloudformation package --template-file samTemplate.yaml --s3-bucket dev-rs-lambda --output-template-file outputSamTemplate.yaml
+         - aws cloudformation package --template-file samTemplate.yaml --s3-bucket dev-rs-lambda --output-template-file samTemplate::outputSamTemplate.yml
 artifacts:
   type: zip
   files:
     - samTemplate.yaml
-    - samTemplate::outputSamTemplate.yaml
+    - samTemplate::outputSamTemplate.yml
