@@ -3,11 +3,11 @@ phases:
   install:
      runtime-versions:
         java: java 8
-     build:
-       commands:
-         - aws cloudformation package --template-file samTemplate.yaml --s3-bucket lambda-code-pipepline --output-template-file outputSamTemplate.yaml
-artifacts:
-  type: zip
-  files:
-    - samTemplate.yaml
-    - outputSamTemplate.yaml
+    # build:
+       #commands:
+        # - aws cloudformation package --template-file samTemplate.yaml --s3-bucket lambda-code-pipepline --output-template-file outputSamTemplate.yaml
+#artifacts:
+ # type: zip
+  #files:
+   # - samTemplate.yaml
+    #- outputSamTemplate.yaml
