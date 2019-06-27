@@ -27,6 +27,9 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <layout>ZIP</layout>
+        </configuration>
       </plugin>
     </plugins>
   </build>

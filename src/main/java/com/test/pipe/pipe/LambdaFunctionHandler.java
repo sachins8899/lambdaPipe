@@ -9,7 +9,7 @@ public class LambdaFunctionHandler implements RequestHandler<Object, String> {
     public String handleRequest(Object input, Context context) {
         context.getLogger().log("Input: " + input);
 
-        return "Hello from Lambda...2.1!";
+        return "Hello from Lambda...3.0!";
     }
 
 }
