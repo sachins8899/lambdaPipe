@@ -2,21 +2,7 @@ version: 0.2
 phases:
   install:
      runtime-versions:
-        java: openjdk8
-        
-     build:
-       commands:
-         - mvn clean
-         - mvn package
-         - ls -alh
-         - cd target/
-         - ls -alh 
-         - aws s3 rm s3://lambda-code-pipeline/ --recursive
-         - aws s3 cp target/pipe-1.0.0.jar s3://lambda-code-pipeline/ --recursive
-     post_build:
-       commands:
-         #- aws lambda delete-function --function-name MavenTest
-         - aws lambda create-function --function-name MavenTest \--zip-file fileb://target/pipe-1.0.0.jar --handler com.test.pipe.pipe.LambdaFunctionHandler --runtime java8 \--role arn:aws:iam::596911091655:role/LambdaRole
+        java: java 8
     # build:
        #commands:
         # - aws cloudformation package --template-file samTemplate.yaml --s3-bucket lambda-code-pipepline --output-template-file outputSamTemplate.yaml
